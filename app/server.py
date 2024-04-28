@@ -1,8 +1,11 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import requests
 import time
 
 app = Flask(__name__)
+CORS(app)
+
 
 #on stock dans le cache les données et le timestamp de la dernière màj
 cache = {
